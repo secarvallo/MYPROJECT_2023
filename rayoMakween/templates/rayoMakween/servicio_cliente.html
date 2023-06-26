@@ -1,0 +1,34 @@
+{% extends 'rayoMakween/base.html' %}
+{% load static %}
+{% block content %}
+<!--TABLAS-->
+<div class="container mt-5 mb-5">
+    <h3 class="text-center p-3">Personal Especializado</h3>
+    <div class="row">
+        <div class="col  mb-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">Alam Brito</h5>
+                    <img src="{% static 'img/personal_alam_brito.jpg' %}" class="card-img-top" alt="...">
+                    <h5 class="p-2" style="font-weight: lighter;"></h5>
+                    <a href="#id_cambio_aceite" class="btn btn-primary mt-3">IR</a>
+                </div>
+            </div>
+        </div>
+        <div class="col md-3">
+            <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Email</th>
+                  </tr>
+                </thead>
+                <tbody id="data"></tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<!--END TABLAS-->
+{% endblock content %}

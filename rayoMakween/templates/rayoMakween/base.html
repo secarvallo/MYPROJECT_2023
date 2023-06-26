@@ -12,10 +12,10 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css'%}"> 
     <!-- Titulo --> 
-    <title>RayoMakween</title>
+    <title>{% block title %}RayoMakween {% endblock title %}</title>
 </head>
 <body>
-
+{% block header %}
 <div class="container-fluid">
     <div class="row">
         <!-- Navbar -->
@@ -60,20 +60,14 @@
 
         </nav>
     </div>
-</div>    
-
-<div>
-    <h1><a href="/">Django Girls Blog</a></h1>
 </div>
+{% endblock header %}    
+<!-- BLOCK -->
+{% block content %}
 
-{% for post in posts %}
-    <div>
-        <p> publicado: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
-
+{% endblock %}
+<!-- BLOCK -->
+{% block footer %}
 <!-- Footer -->
 <footer class="footer mt-3 p-3">
     <div class="container">
@@ -122,7 +116,7 @@
     <h6 class="text-white text-center">Copyright &copy; 2023 Design by Sergio Carvallo</h6>
 </footer>
 <!--JQuery-->
-<script src="dist\jquery\jquery-3.7.0.min.js"></script>
+<script src="{% static 'jquery\jquery-3.7.0.min.js' %}"></script>
 <!--Jquery URL-->
 <!--<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>-->
 <!-- Bootstrap Javascript CDN -->
@@ -130,7 +124,10 @@
 <!--SweetAlert CDN-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!--Main Javascript-->
-<script src="dist\js\main.js"></script>
-<script src="dist/js/index_sweet.js"></script>
+<script src="{% static 'js\index_sweet.js' %}"></script>
+<script src="{% static 'js\contacto.js' %}"></script>
+<script src="{% static 'js\identity.js' %}"></script>
+<script src="{% static 'js\json.js' %}"></script>
+{% endblock footer %}
 </body>
 </html>

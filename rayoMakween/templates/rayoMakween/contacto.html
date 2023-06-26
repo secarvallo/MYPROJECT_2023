@@ -1,0 +1,201 @@
+{% extends 'rayoMakween/base.html' %}
+{% load static %}
+{% block content %}
+<!--CONTACTO-->
+<div class="container-fluid">
+    <div class="row mb-5 p-5 text-center">
+        <div class="col col-2"></div>
+        <div class="col col-8 fs-3" style=" text-align: justify;">
+            <h4 class="text-center fw-bold">CONTÁCTANOS</h4>
+            <!--<p>En Rayo Makween, nos preocupamos por ofrecerte servicios automotrices de calidad a precios competitivos. Nuestros servicios tienen tarifas accesibles y 
+                estamos constantemente ofreciendo promociones y descuentos especiales para brindarte un mayor valor por tu dinero. </p>
+            --> 
+            <p>
+                ¡Contáctanos en Rayo Makween a través de nuestro formulario online! Visita nuestra página web en www.rayomakween.com y completa el formulario para enviarnos
+                 tus consultas o solicitudes. Estaremos encantados de atenderte y brindarte la información que necesitas sobre nuestros servicios automotrices.
+            </p>
+        </div>
+        <div class="col col-2"></div>
+    </div>
+</div>
+<!--END CONTACTO-->
+    <div class="container-fluid">
+        <form class="row g-3 mb-5 p-5 needs-validation " style="background-color:darkgrey ;"  novalidate>
+          <h4 class="text-center ">CONTÁCTANOS</h4>
+          <div class="col-3"></div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-6 center-block">
+                <label for="validationCustom01" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Cosito" required>
+                <div class="valid-feedback">
+                  ¡Ok!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, Ingresa un Nombre.
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="validationCustom02" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="validationCustom02"  required>
+                <div class="valid-feedback">
+                  ¡Ok!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, Ingresa un Apellido.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <label for="validationCustomUsername" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend"></span>
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                  <div class="valid-feedback">
+                    ¡Ok!
+                  </div>
+                  <div class="invalid-feedback">
+                    Por favor, Ingresa un Email.
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="validationCustomUsername" class="form-label">Celular</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">+569</span>
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                  <div class="valid-feedback">
+                    ¡Ok!
+                  </div>
+                  <div class="invalid-feedback">
+                    Por favor, Ingresa un Celular.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="validationCustom03" class="form-label">Comuna</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected value=""></option>
+                  <option value="1">Arica y Parinacota</option>
+                  <option value="2">Tarapacá</option>
+                  <option value="3">Antofagasta</option>
+                  <option value="4">Atacama</option>
+                  <option value="5">Coquimbo</option>
+                  <option value="6">Valparaíso</option>
+                  <option value="7">Metropolitana de Santiago</option>
+                  <option value="8">Libertador General Bernardo O'Higgins</option>
+                  <option value="9">Maule</option>
+                  <option value="10">Ñuble</option>
+                  <option value="11">Biobío</option>
+                  <option value="12">Araucanía</option>
+                  <option value="13">Los Ríos</option>
+                  <option value="14">Los Lagos</option>
+                  <option value="15">Aysén del General Carlos Ibáñez del Campo</option>
+                  <option value="16">Magallanes y de la Antártica Chilena</option>
+                </select>
+                <div class="valid-feedback">
+                  ¡Ok!
+                </div>
+                <div class="invalid-feedback">
+                  Proporciona una Region válida.
+                </div>
+              </div>
+              <div class="col">
+                <label for="validationCustom04" class="form-label">Region</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected value=""></option>
+                  <optgroup label="Comunas de Santiago">
+                    <option value="1">Santiago</option>
+                    <option value="2">Cerrillos</option>
+                    <option value="3">Cerro Navia</option>
+                    <option value="4">Conchalí</option>
+                    <option value="5">El Bosque</option>
+                    <option value="6">Estación Central</option>
+                    <option value="7">Huechuraba</option>
+                    <option value="8">Independencia</option>
+                    <option value="9">La Cisterna</option>
+                    <option value="10">La Florida</option>
+                    <option value="11">La Granja</option>
+                    <option value="12">La Pintana</option>
+                    <option value="13">La Reina</option>
+                    <option value="14">Las Condes</option>
+                    <option value="15">Lo Barnechea</option>
+                    <option value="16">Lo Espejo</option>
+                    <option value="17">Lo Prado</option>
+                    <option value="18">Macul</option>
+                    <option value="19">Maipú</option>
+                    <option value="20">Ñuñoa</option>
+                    <option value="21">Pedro Aguirre Cerda</option>
+                    <option value="22">Peñalolén</option>
+                    <option value="23">Providencia</option>
+                    <option value="24">Pudahuel</option>
+                    <option value="25">Quilicura</option>
+                    <option value="26">Quinta Normal</option>
+                    <option value="27">Recoleta</option>
+                    <option value="28">Renca</option>
+                    <option value="29">San Joaquín</option>
+                    <option value="30">San Miguel</option>
+                    <option value="31">San Ramón</option>
+                    <option value="32">Vitacura</option>
+                  </optgroup>
+                </select>
+                <div class="valid-feedback">
+                  ¡Ok!
+                </div>
+                <div class="invalid-feedback">
+                  Proporciona una Comuna válida.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="validationCustom04" class="form-label">Servicios</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected value="">Servicios</option>
+                  <option value="1">Cambio de Aceite</option>
+                  <option value="2">Remplazo de Bateria</option>
+                  <option value="3">Mantención Preventiva</option>
+                  <option value="4">Sistemas Eléctricos</option>
+                  <option value="5">Alineación y Balanceo de Ruedas</option>
+                  <option value="6">Cambio de Filtro</option>
+                </select>
+                <div class="valid-feedback">
+                  ¡Ok!
+                </div>
+                <div class="invalid-feedback">
+                  Selecciona un estado válido.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <label for="validationCustom05" class="form-label">Comentario</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
+              <div class="valid-feedback">
+                ¡Ok!
+              </div>
+              <div class="invalid-feedback">
+                Proporciona un código postal válido.
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Acepta los términos y condiciones
+                </label>
+                <div class="invalid-feedback">
+                  Debe estar de acuerdo antes de enviar.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <button class="btn btn-primary" type="submit">Enviar formulario</button>
+            </div>
+          </div>
+          <div class="col-3"></div>
+      </form>
+  </div>
+{% endblock content %}

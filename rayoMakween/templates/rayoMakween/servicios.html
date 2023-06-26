@@ -1,0 +1,116 @@
+{% extends 'rayoMakween/base.html' %} 
+{% load static %}
+{% block content %}
+<!--SERVICIOS-->
+<div class="container-fluid">
+    <div class="row mb-5 p-5 text-center">
+        <div class="col col-2"></div>
+        <div class="col col-8 fs-3" style=" text-align: justify;">
+            <h4 class="text-center fw-bold">SERVICIOS</h4>
+            <p>En nuestra sección de servicios, en Rayo Makween, ofrecemos una amplia gama de soluciones automotrices para satisfacer todas tus necesidades. 
+            Nos especializamos en mantenimiento preventivo, cambio de aceite y reemplazo de baterías, asegurando el rendimiento óptimo y la durabilidad de tu
+            vehículo. Nuestro equipo altamente cualificado y experimentado se encarga de cada detalle, brindando un servicio confiable y profesional. Ya sea que 
+            necesites una revisión completa de tu automóvil o simplemente un cambio de aceite rápido, estamos aquí para brindarte la atención personalizada que mereces. 
+            Confía en nosotros para mantener tu vehículo en excelente estado y disfruta de un viaje seguro y sin preocupaciones.
+            </p>
+        </div>
+        <div class="col col-2"></div>
+    </div>
+</div>
+<!--END SERVICIOS-->
+<!--VIDEO-->
+<div class="video">
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 mb-5">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/DWLAdNo3aLQ" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+</div>
+<!--END VIDEO-->
+    <!-- Cards -->
+    <div class="container-fluid">
+        <div class="row p-3 ">
+            <div class="col-sm-4 mb-3 center">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">CAMBIO DE ACEITE</h5>
+                        <img src="{% static 'img/01.-ACEITE.jpg' %}" class="card-img-top" alt="...">
+                        <h5 class="p-2" style="font-weight: lighter;">Cotización personalizada en Rayo Makween: mantenimiento preventivo, cambio de aceite y reemplazo de baterías. 
+                        ¡Contáctanos ahora!"</h5>
+                        <a href="#id_cambio_aceite" class="btn btn-primary mt-3">IR</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-1" >
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">REMPLAZO BATERIA</h5>
+                        <img src="{% static 'img/02.-BATERIA.jpg' %}" class="card-img-top" alt="...">
+                        <h5 class="p-2" style="font-weight: lighter;">Cotización personalizada en Rayo Makween: mantenimiento preventivo, cambio de aceite y reemplazo de baterías. 
+                        ¡Contáctanos ahora!"</h5>
+                        <a href="REMPLAZO_BATERIA.html" class="btn btn-primary mt-3">IR</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-1">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">MANTENCION PREVENTIVA</h5>
+                        <img src="{% static 'img/03.-MANTENCION.jpg' %}" class="card-img-top" alt="...">
+                        <h5 class="p-2" style="font-weight: lighter;">Cotización personalizada en Rayo Makween: mantenimiento preventivo, cambio de aceite y reemplazo de baterías. 
+                        ¡Contáctanos ahora!"</h5>
+                        <a href="MANTENCION.html" class="btn btn-primary mt-3">IR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3">
+            <div class="col-sm-4 mb-3 center">
+                <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">SISTEMAS ELÉCTRICOS</h5>
+                    <img src="{% static 'img/mecanico_04.jpg' %}" class="card-img-top" alt="...">
+                    <h5 class="p-2" style="font-weight: lighter;">Cotización personalizada en Rayo Makween: mantenimiento preventivo, cambio de aceite y reemplazo de baterías. 
+                    ¡Contáctanos ahora!"</h5>
+                    <a href="CAMBIO_DE_ACEITE.html" class="btn btn-primary mt-3">IR</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-1" >
+                <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">ALINEACIÓN Y BALANCEO DE RUEDAS</h5>
+                    <img src="{% static 'img/mecanico_05.jpg' %}" class="card-img-top" alt="...">
+                    <h5 class="p-2" style="font-weight: lighter;">Cotización personalizada en Rayo Makween: mantenimiento preventivo, cambio de aceite y reemplazo de baterías. 
+                    ¡Contáctanos ahora!"</h5>
+                    <a href="REMPLAZO_BATERIA.html" class="btn btn-primary mt-3">IR</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-1">
+                <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">CAMBIO DE FILTROS</h5>
+                    <img src="{% static 'img/filtros_01.jpg' %}" class="card-img-top" alt="...">
+                    <h5 class="p-2" style="font-weight: lighter;">Cotización personalizada en Rayo Makween: mantenimiento preventivo, cambio de aceite y reemplazo de baterías. 
+                    ¡Contáctanos ahora!"</h5>
+                    <a href="MANTENCION.html" class="btn btn-primary mt-3">IR</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>       
+{% endblock  %}
