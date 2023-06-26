@@ -17,10 +17,3 @@ def sCliente(request):
     return render(request, "rayoMakween/servicio_cliente.html")
 def identity(request):
     return render(request, "rayoMakween/identity.html")
-
-def formulario(request):
-    return render(request, "rayoMakween/formulario.html")
-
-def base(request):
-    Form= Forms.objects.all()
-    return render(request, "rayoMakween/base.html", {"forms": Form})

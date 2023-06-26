@@ -8,6 +8,4 @@ urlpatterns = [
     path('contacto', views.contacto, name="contacto"),#CONTACTO
     path('servicioCliente', views.sCliente, name="sCliente"),#SERVIOS AL CLIENTE
     path('identity', views.identity, name="identity"),#IDENTITY
-
-    path('formulario', views.formulario, name="formulario"),
 ]
