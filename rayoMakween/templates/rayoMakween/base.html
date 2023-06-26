@@ -21,7 +21,7 @@
         <!-- Navbar -->
         <nav class="navbar text-center fs-2">
             <div class="col">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{% url 'index' %}">
                 <!-- Brand image -->
                     <img src="{% static 'img\RAYO_MAKWEEN_COLOR-01.svg'%}" alt="Logo">
                 <!--  -->
@@ -29,25 +29,25 @@
             </div>
                 <!-- Nosotros -->
                 <li class="nav nav-link">
-                    <a class="nav-link"  href="index.html">Nosotros</a>
+                    <a class="nav-link"  href="{% url 'index' %}">Nosotros</a>
                 </li>
                 <!-- Servicios -->
                 <li class="nav nav-link">
-                    <a class="nav-link" href="servicios.html">Servicios</a>
+                    <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
                 </li>
                 <!-- Precios -->
                 <li class="nav nav-link">
-                    <a class="nav-link"  href="precios.html">Precios</a>
+                    <a class="nav-link"  href="{% url 'precios' %}">Precios</a>
                 </li>
                 <!-- Contacto -->
                 <li class="nav nav-link">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
                 </li>
                 <!--Input & Buscar Button -->
             <div class="col-3 align-self-center">  
                 <div class="row">
                     <form class="d-flex p-4" role="Ingresar" >
-                        <a class="btn btn-primary" href="identity.html" role="button">Ingresar</a>
+                        <a class="btn btn-primary" href="{% url 'identity' %}" role="button">Ingresar</a>
                     </form>
                 </div> 
                 <div class="row">
