@@ -1,10 +1,14 @@
 
 .navbar-brand img{
-    width:11rem|;
+    
+    width:11rem;
     height:11rem ;
 }
 .navbar{
     background-color: #373737
+}
+.nav-item{
+    color: white;
 }
 .nav-link{
     color: white;
