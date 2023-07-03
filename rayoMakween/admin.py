@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Forms
+from .models import formulario
 
 # Register your models here.
-admin.site.register(Forms)
+admin.site.register(formulario)
 

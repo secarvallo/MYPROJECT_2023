@@ -18,16 +18,30 @@
         <div class="col col-2"></div>
     </div>
 </div>
+{% for i in formularios %}
+  <ul>
+    <li>{{i.nombre}}</li>
+    <li>{{i.apellido}}</li>
+    <li>{{i.email}}</li>
+    <li>{{i.celular}}</li>
+    <li>{{i.comuna}}</li>
+    <li>{{i.region}}</li>
+    <li>{{i.servicios}}</li>
+    <li>{{i.comentario}}</li>
+  </ul>
+{% endfor %}
 <!--END CONTACTO-->
     <div class="container-fluid">
-        <form class="row g-3 mb-5 p-5 needs-validation " style="background-color:darkgrey ;"  novalidate>
+        <form  action = "/regForms/" method = "POST"  class="row g-3 mb-5 p-5 needs-validation " style="background-color:darkgrey ;"  novalidate>
+          {% csrf_token %}
           <h4 class="text-center ">CONTÁCTANOS</h4>
           <div class="col-3"></div>
           <div class="col-6">
             <div class="row">
               <div class="col-6 center-block">
+                
                 <label for="validationCustom01" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="validationCustom01" value="Cosito" required>
+                <input type="text" class="form-control" id="txtNombre" name= "txtNombre" value="" placeholder="" required>
                 <div class="valid-feedback">
                   ¡Ok!
                 </div>
@@ -37,7 +51,7 @@
               </div>
               <div class="col-6">
                 <label for="validationCustom02" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="validationCustom02"  required>
+                <input type="text" class="form-control" id="txtApellido" name= "txtApellido" value="" placeholder="" required>
                 <div class="valid-feedback">
                   ¡Ok!
                 </div>
@@ -51,7 +65,7 @@
                 <label for="validationCustomUsername" class="form-label">Email</label>
                 <div class="input-group has-validation">
                   <span class="input-group-text" id="inputGroupPrepend"></span>
-                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                  <input type="text" class="form-control" id="txtEmail" aria-describedby="inputGroupPrepend" required>
                   <div class="valid-feedback">
                     ¡Ok!
                   </div>
@@ -64,7 +78,7 @@
                 <label for="validationCustomUsername" class="form-label">Celular</label>
                 <div class="input-group has-validation">
                   <span class="input-group-text" id="inputGroupPrepend">+569</span>
-                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                  <input type="text" class="form-control" id="numCelular" aria-describedby="inputGroupPrepend" required>
                   <div class="valid-feedback">
                     ¡Ok!
                   </div>
@@ -77,7 +91,7 @@
             <div class="row">
               <div class="col">
                 <label for="validationCustom03" class="form-label">Comuna</label>
-                <select class="form-select" id="validationCustom04" required>
+                <select class="form-select" id="txtComuna" required>
                   <option selected value=""></option>
                   <option value="1">Arica y Parinacota</option>
                   <option value="2">Tarapacá</option>
@@ -105,7 +119,7 @@
               </div>
               <div class="col">
                 <label for="validationCustom04" class="form-label">Region</label>
-                <select class="form-select" id="validationCustom04" required>
+                <select class="form-select" id="txtRegion" required>
                   <option selected value=""></option>
                   <optgroup label="Comunas de Santiago">
                     <option value="1">Santiago</option>
@@ -153,7 +167,7 @@
             <div class="row">
               <div class="col">
                 <label for="validationCustom04" class="form-label">Servicios</label>
-                <select class="form-select" id="validationCustom04" required>
+                <select class="form-select" id="txtServicios" required>
                   <option selected value="">Servicios</option>
                   <option value="1">Cambio de Aceite</option>
                   <option value="2">Remplazo de Bateria</option>
@@ -172,7 +186,7 @@
             </div>
             <div class="col">
               <label for="validationCustom05" class="form-label">Comentario</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
+              <textarea class="form-control" id="txtComentario" rows="3" ></textarea>
               <div class="valid-feedback">
                 ¡Ok!
               </div>

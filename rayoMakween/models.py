@@ -1,12 +1,17 @@
-from django.db import models
+from django.db import models 
 
 # Create your models here.
 
-class Forms(models.Model):
-    codigo = models.CharField(primary_key=True, max_length=10)
+class formulario(models.Model):
     nombre = models.CharField(max_length=50)
-    creditos = models.PositiveIntegerField()
+    apellido = models.CharField(max_length=50)
+    email = models.EmailField(max_length=254)
+    celular = models.CharField(max_length=15)
+    comuna = models.CharField(max_length=15)
+    region = models.CharField(max_length=15)
+    servicios = models.CharField(max_length=15)
+    comentario = models.TextField()
 
     def __str__(self):
-        texto = "{0}({1})"
-        return texto.format(self.nombre, self.creditos)
+        text = "{0} ({1})"
+        return text.format(self.nombre, self.apellido) 
