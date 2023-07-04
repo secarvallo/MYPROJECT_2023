@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   
     $("#btnlogin").click(function(){
@@ -21,6 +22,7 @@ $(document).ready(function(){
             );
         }else{
             if(email === "se.carvallo@duocuc.cl" && clave === "duoc"){
+
                 Swal.fire({
                     title: 'Felicitaciones!',
                     text: 'Usuario correcto.',
@@ -28,8 +30,9 @@ $(document).ready(function(){
                     icon: 'success',
                     width: 400,
                     imageAlt: 'Custom image',
-                
-                } );           
+                } ).then(function(){
+                    window.location.href= "myproject\rayoMakween\templates\rayoMakween\identity.html";
+                });           
                 $("#error").addClass("d-none");   
                 $("#correcto").removeClass("d-none");
             } else{
@@ -37,6 +40,7 @@ $(document).ready(function(){
                     title: 'Uuuuupss!',
                     text: 'Usuario incorrecto.',
                     imageUrl: 'https://cdn.pixabay.com/photo/2023/05/23/20/29/rayo-makween-8013448_150.png',
+                    
                     icon: 'warning',
                     width: 400,
                     imageAlt: 'Custom image',
