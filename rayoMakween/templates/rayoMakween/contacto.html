@@ -13,6 +13,7 @@
       </div>
   </div>
 </div>
+
 {% for i in formularios %}
   <ul>
     <li>{{i.nombre}}</li>
@@ -27,19 +28,20 @@
 {% endfor %}
 <!--END CONTACTO-->
 <div class="container-fluid">
-  <form  action = "/regForms/" method = "POST"  class="row g-3 mb-5 p-5 needs-validation " style="background-color:darkgrey ;"  novalidate>{% csrf_token %}
+  <form  action = "regForms" method = 'POST'  class="row g-3 mb-5 p-5 needs-validation " style="background-color:darkgrey ;">{% csrf_token %}
     <h4 class="text-center ">CONTÁCTANOS</h4>
     <div class="col-xl-8 col-lg-10 col-md-10  mx-auto">
       <div class="row">
+        {{ form }}
         <div class="col col-md mx-auto center-block">
             <label for="validationCustom01" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="txtNombre" name= "txtNombre" value="" placeholder="" required>
+            <input id="txtNombre" type="text" class="form-control"  name= "txtNombre" value="" placeholder="Nombre" required>
             <div class="valid-feedback">¡Ok!</div>
             <div class="invalid-feedback">Por favor, Ingresa un Nombre.</div>
         </div>
         <div class="col col-md mx-auto center-block">
           <label for="validationCustom02" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="txtApellido" name= "txtApellido" value="" placeholder="" required>
+          <input id="txtApellido" type="text" class="form-control"  name= "txtApellido" value="" placeholder="Apellido" required>
           <div class="valid-feedback">¡Ok!</div>
           <div class="invalid-feedback">Por favor, Ingresa un Apellido.</div>
         </div>
@@ -49,8 +51,8 @@
         <div class="col col-md mx-auto center-block">
           <label for="validationCustomUsername" class="form-label">Email</label>
           <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend"></span>
-            <input type="text" class="form-control" id="txtEmail" aria-describedby="inputGroupPrepend" required>
+            <span id="inputGroupPrepend" class="input-group-text" ></span>
+            <input id="txtEmail" type="text" class="form-control" placeholder="email@mail.com" aria-describedby="inputGroupPrepend" required>
             <div class="valid-feedback">¡Ok!</div>
             <div class="invalid-feedback">Por favor, Ingresa un Email.</div>
           </div>
@@ -59,7 +61,7 @@
             <label for="validationCustomUsername" class="form-label">Celular</label>
             <div class="input-group has-validation">
               <span class="input-group-text" id="inputGroupPrepend">+569</span>
-              <input type="text" class="form-control" id="numCelular" aria-describedby="inputGroupPrepend" required>
+              <input id='numCelular' type="text" class="form-control" placeholder="999 999 999" aria-describedby="inputGroupPrepend" required>
               <div class="valid-feedback">¡Ok!</div>
               <div class="invalid-feedback">Por favor, Ingresa un Celular.</div>
             </div>
@@ -69,7 +71,7 @@
       <div class="row">
           <div class="col col-md mx-auto center-block">
             <label for="validationCustom04" class="form-label">Servicios</label>
-            <select class="form-select" id="txtServicios" required>
+            <select id="txtServicios" class="form-select"  required>
               <option selected value="">Servicios</option>
               <option value="1">Cambio de Aceite</option>
               <option value="2">Remplazo de Bateria</option>
@@ -85,13 +87,13 @@
         <!--tercera columna-->
         <div class="col">
           <label for="validationCustom05" class="form-label">Comentario</label>
-          <textarea class="form-control" id="txtComentario" rows="3" ></textarea>
+          <textarea id="txtComentario" class="form-control" placeholder="Ingese su Comentario" rows="3" ></textarea>
           <div class="valid-feedback">¡Ok!</div>
           <div class="invalid-feedback">Proporciona un código postal válido.</div>
         </div>
         <div class="col">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <input id="invalidCheck" class="form-check-input" type="checkbox" value=""  required>
             <label class="form-check-label" for="invalidCheck">Acepta los términos y condiciones</label>
             <div class="invalid-feedback">Debe estar de acuerdo antes de enviar.</div>
           </div>

@@ -38,19 +38,31 @@
             <a class="nav-link " href="{% url 'contacto' %}">Contacto</a>
           </li>
         </ul>
-
         <div class= "row"> 
-            <form class="d-grid gap-2 d-md-flex justify-content-md-end ">
-                <form class="d-flex p-4 " role="Ingresar" >
-                    <a class="btn btn-primary me-3" href="{% url 'identity' %}" role="button">Ingresar</a>
-                </form>
+            <!--Validacion ingreso usuario-->
+            <form class="d-grid gap-2 d-md-flex justify-content-md ">
+                {% if request.user.is_authenticated %}
+                    <form class="d-flex p-4 " role="Ingresar" >
+                        <a class="btn btn-primary me-3 mx-auto" href="{% url 'logout' %}" role="button">Salir</a>
+                    </form>
+                {% else %}
+                    <form class="d-flex p-4 " role="Ingresar" >
+                        <a class="btn btn-primary me-3 mx-auto" href={% url 'login' %} role="button">Ingresar</a>
+                    </form>
+                    <form class="d-flex " role="Ingresar" >
+                        <a class="btn text-white me-3 mx-auto " href={% url 'register' %} role="button">Registrarse</a>
+                    </form>
+                {% endif %}
                 <form class="d-flex p-3">
                     <input class="form-control  me-3" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-light btn-primary me-3" type="submit">Buscar</button>
                 </form>
             </form> 
+            <!--Nombre de Usuario en la Base-->
+            {% if request.user.is_authenticated %}
+                <hr><h5 class="text-white">Bienvenido {{ user.username | upper }}</h5>
+            {% endif %}
         </div>
-
       </div>
     </div>
   </nav>   

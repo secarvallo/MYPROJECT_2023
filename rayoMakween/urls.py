@@ -10,5 +10,7 @@ urlpatterns = [
     path('servicioCliente', views.sCliente, name="sCliente"),#SERVIOS AL CLIENTE
     path('identity', views.identity, name="identity"),#IDENTITY
     #----------------------------------------------------> 
-    path('regForms/', views.regForms, name='regForms'),#REGISTRO DE FORMULARIO
+    path('regForms', views.regForms, name='regForms'),#REGISTRO DE FORMULARIO
+    path('register', views.register, name='register'),#REGISTRO DE FORMULARIO
+
 ]   

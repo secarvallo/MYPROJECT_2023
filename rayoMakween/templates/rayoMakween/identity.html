@@ -5,26 +5,28 @@
 <div class="container-fluid">
     <div class="row p-5"style="background-color:darkgrey ;">
         <div class="col col-10 col-sm-4 mt-5 mb-5  mx-auto">
-            <div class="alert alert-danger d-none" role="alert" id="error"> </div>
-            <h3 class="text-center">Inicia Sesión</h3>
-            <!--  DEFINICIÓN DE INPUT PARA INGRESAR CORREO ELECTRÓNICO -->
-                <div class="mb-3">
-                    <label for="txtcorreo" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="txtcorreo" placeholder="name@example.com">
-                </div>
-            <!--  DEFINICIÓN DE INPUT PARA INGRESAR CORREO CONTRASEÑA -->
-                <div class="mb-3">
-                    <label for="txtclave" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="txtclave" placeholder="Ingresa tu clave">
-                </div>
-            <!--  DEFINICIÓN DE BOTÓN PARA VALIDAR LOGIN -->
-                <div class="d-grid gap-2">
-                    <button class="btn btn-primary" type="button" id="btnlogin">Iniciar Sesión</button>
-                </div>
-            <!--  DEFINICIÓN DE ETIQUETA QUE MANEJARA LOS MENSAJES DE EXITO (POR DEFECTO EL CONTENIDO ESTA OCULTO) -->
-                <div class="alert alert-success mt-2 d-none" role="alert" id="correcto">
-                Usuario correcto ! 
-                 </div>
+            <form id="id_login_form" class="form" action="{% url 'sCliente' %}" method="POST">{% csrf_token %}
+                <div class="alert alert-danger d-none" role="alert" id="error"> </div>
+                <h3 class="text-center">Inicia Sesión</h3>
+                <!--  DEFINICIÓN DE INPUT PARA INGRESAR CORREO ELECTRÓNICO -->
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Email</label>
+                        <input id="username" type="email" class="form-control"  placeholder="name@example.com">
+                    </div>
+                <!--  DEFINICIÓN DE INPUT PARA INGRESAR CORREO CONTRASEÑA -->
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input id="pasword" type="password" class="form-control" placeholder="Ingresa tu clave">
+                    </div>
+                <!--  DEFINICIÓN DE BOTÓN PARA VALIDAR LOGIN -->
+                    <div class="d-grid gap-2">
+                        <button  id="btnlogin" class="btn btn-primary" type="submit">Iniciar Sesión</button>
+                    </div>
+                <!--  DEFINICIÓN DE ETIQUETA QUE MANEJARA LOS MENSAJES DE EXITO (POR DEFECTO EL CONTENIDO ESTA OCULTO) -->
+                    <div class="alert alert-success mt-2 d-none" role="alert" id="correcto">
+                    Usuario correcto ! 
+                    </div>
+            </form>
         </div>
     </div>
 </div>

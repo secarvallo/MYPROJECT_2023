@@ -1,0 +1,22 @@
+{% extends 'rayoMakween/base.html' %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+<div class="container-fluid">
+    <div class="row p-5"style="background-color:darkgrey ;">
+        <div class="col col-10 col-sm-4 mt-5 mb-5  mx-auto">
+            <form action="" method='POST'> {% csrf_token %}
+                <div class="card mx-auto" style="width: 30rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Registrarse</h5>
+                        {{ form | crispy }}
+                        <a href="{% url 'index' %}" class="card-link">Inicio</a>
+                        <button class="btn btn-sm btn-primary float-end" type="submit">Registrarse</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
