@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate, login
+from .forms import CustomUserCreationForm
 from .models import Formulario
 # Create your views here.
 #----------------------------------------------------> Templates
@@ -10,14 +10,15 @@ def index(request):
     return render(request, "rayoMakween/index.html")
 def servicios(request):
     return render(request, "rayoMakween/servicios.html")
-
 def contacto(request):
-    forms = Formulario.objects.all()
-    return render(request, "rayoMakween/contacto.html", {'formularios':forms})
+    f = Formulario.objects.all()
+    return render(request, "rayoMakween/contacto.html", {'formularios':f})
 def sCliente(request):
     return render(request, "rayoMakween/servicio_cliente.html")
 def identity(request):
     return render(request, "rayoMakween/identity.html")
+#------------------------------------------------------> 
+
 #------------------------------------------------------> 
 def regForms(request):
     nombre = request.POST['txtNombre']
@@ -30,7 +31,6 @@ def regForms(request):
     return redirect('/')
 
 #------------------------------------------------------>
-
 @login_required
 def precios(request):
     return render(request, "rayoMakween/precios.html")
@@ -53,7 +53,4 @@ def register(request):
             data['form'] = user_creation_form
 
     return render(request, 'registration/register.html', data)
-
-
-
 #------------------------------------------------------>

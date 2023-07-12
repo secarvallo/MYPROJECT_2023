@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('rayoMakween.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('contact/', include('contact.urls')),
 ]

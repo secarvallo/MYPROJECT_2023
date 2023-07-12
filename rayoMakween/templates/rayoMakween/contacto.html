@@ -13,19 +13,6 @@
       </div>
   </div>
 </div>
-
-{% for i in formularios %}
-  <ul>
-    <li>{{i.nombre}}</li>
-    <li>{{i.apellido}}</li>
-    <li>{{i.email}}</li>
-    <li>{{i.celular}}</li>
-    <li>{{i.comuna}}</li>
-    <li>{{i.region}}</li>
-    <li>{{i.servicios}}</li>
-    <li>{{i.comentario}}</li>
-  </ul>
-{% endfor %}
 <!--END CONTACTO-->
 <div class="container-fluid">
   <form  action = "regForms" method = 'POST'  class="row g-3 mb-5 p-5 needs-validation " style="background-color:darkgrey ;">{% csrf_token %}
