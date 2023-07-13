@@ -10,4 +10,4 @@ class Contact(models.Model):
 
     def __str__(self):
         text = "{0} ({1})"
-        return text.format(self.nombre, self.celular) 
+        return text.format(self.nombre, self.email) 

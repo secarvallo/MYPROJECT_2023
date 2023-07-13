@@ -3,65 +3,85 @@
 {% block content %}
  <!-- CONTENIDO DE LA PAGINA -->
  <div class="container mt-5">
-    <h3 class="text-center">Contactanos</h3>
-    <p class="fs-5 text-center px-5">Es un placer que puedas contactarnos. Nos pondremos en contacto contigo, en el menor tiempo posible.</p>
     <div class="row">
-        <div class="col-md-6 mx-auto">
-            <form action="" method='POST'>{% csrf_token %} 
-                <div class="mb-3 ">
+        <div class="col col-md-8 col-10 mx-auto fs-3 pb-5">
+            <h4 class="text-center fw-bold ">CONTACTO</h4>
+            <p style="text-align: justify">
+              ¡Contáctanos en Rayo Makween a través de nuestro formulario online! Visita nuestra página web en www.rayomakween.com y completa el formulario para enviarnos
+              tus consultas o solicitudes. Estaremos encantados de atenderte y brindarte la información que necesitas sobre nuestros servicios automotrices.
+            </p>
+        </div>
+    </div>
+<div class="container-fluid">
+    <form action = "" method = 'POST'  class="row g-3 p-5 needs-validation " style="background-color:darkgrey ;">{% csrf_token %} 
+        <h4 class="text-center ">CONTÁCTANOS</h4>
+        <div class="col-xl-8 col-lg-10 col-md-10  mx-auto">
+            <div class="row ">
+                <div class="col col-md mx-auto center-block">
                     <label for="nombre" class="form-label">Nombre</label>
                     {{ form.nombre }}
                     {{ form.nombre.errors}}
-                    <div id="nameHelp" class="form-text">Por favor, indique su nombre</div>
+                    <div id="nameHelp" class="form-text p-2">Por favor, indique su nombre</div>
                 </div>
-                <div class="mb-3">
+                <div class="col col-md mx-auto center-block">
                     <label for="apellido" class="form-label">Apellido</label>
                     {{ form.apellido }}
                     {{ form.apellido.errors}}
-                    <div id="nameHelp" class="form-text">Por favor, indique su apellido</div>
+                    <div id="nameHelp" class="form-text p-2">Por favor, indique su apellido</div>
                 </div>
-                <div class="mb-3">
+            </div>
+            <div class="row">
+                <div class="col col-md mx-auto center-block">
                     <label for="email" class="form-label">Correo Electrónico</label>
                     {{ form.email }}
                     {{ form.email.errors}}
-                    <div id="emailHelp" class="form-text">Nunca compartiremos el correo electrónico que indique a continuación</div>
+                    {% comment %}
+                    <div id="emailHelp" class="form-text">Nunca compartiremos el correo electrónico que indique a continuación</div>   
+                    {% endcomment %}
                 </div>
-                <div class="input-group flex-nowrap">
-                    <span class="input-group-text" id="addon-wrapping">+569</span>
-                    {{ form.celular }}
-                    {{ form.celular.errors}}
+                <div class= ' col col-md mx-auto center-block'>
+                    <div class="input-group flex-nowrap mt-4">
+                        <span class="input-group-text" id="addon-wrapping">+569</span>
+                        {{ form.celular }}
+                        {{ form.celular.errors}}
+                    </div>
                 </div>
-                <!--
-                    <div class="col col-md mx-auto center-block">
-                    <label for="validationCustom04" class="form-label">Servicios</label>
-                    {{ form.servicios }}
-                    {{ form.servicios.errors}}
-                    <select id="txtServicios" class="form-select"  required>
-                    <option selected value="">Servicios</option>
-                    <option value="1">Cambio de Aceite</option>
-                    <option value="2">Remplazo de Bateria</option>
-                    <option value="3">Mantención Preventiva</option>
-                    <option value="4">Sistemas Eléctricos</option>
-                    <option value="5">Alineación y Balanceo de Ruedas</option>
-                    <option value="6">Cambio de Filtro</option>
-                    </select>
-                    <div class="valid-feedback">¡Ok!</div>
-                    <div class="invalid-feedback">Selecciona un estado válido.</div>
-                </div>
-                -->
+            </div>
+            <div class="col col-md mx-auto center-block">
                 <div class="mb-3">
-                    <label for="message" class="form-label">Mensaje</label>
+                    <label for="message" class="form-label">Comentario</label>
                     {{ form.comentario }}
                     {{ form.comentario.errors}}
                 </div>
-                <input class='btn btn-primary mb-3' type='submit' value='Enviar Mensaje'>
-            </form>
-            
+            </div>
+            <div class= 'row'>
+                <div class=" d-grid gap-2 d-flex d-md-flex justify-content-left">
+                    <button class="btn btn-primary me-md-2" type="submit">Enviar</button>
+                    <a class="btn btn-primary " href="{% url 'index' %}"role='button'>Volver al Inicio</a>
+                  </div>
+            </div>
         </div>
+    </form>
+</div>
+   
     </div>
-    <div class="d-grid gap-2 col-2 mx-auto mb-3">
-        <a class="btn btn-primary btn-lg" href="{% url 'index' %}">Volver al Inicio</a>
-    </div>    
 </div>
 {% endblock %}
-   
+<!--
+<div class="col col-md mx-auto center-block">
+<label for="validationCustom04" class="form-label">Servicios</label>
+{{ form.servicios }}
+{{ form.servicios.errors}}
+<select id="txtServicios" class="form-select"  required>
+<option selected value="">Servicios</option>
+<option value="1">Cambio de Aceite</option>
+<option value="2">Remplazo de Bateria</option>
+<option value="3">Mantención Preventiva</option>
+<option value="4">Sistemas Eléctricos</option>
+<option value="5">Alineación y Balanceo de Ruedas</option>
+<option value="6">Cambio de Filtro</option>
+</select>
+<div class="valid-feedback">¡Ok!</div>
+<div class="invalid-feedback">Selecciona un estado válido.</div>
+</div>
+-->
